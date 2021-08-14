@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		281B284226C56F5200636A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B284126C56F5200636A0D /* AppDelegate.swift */; };
 		281B284426C56F5200636A0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B284326C56F5200636A0D /* SceneDelegate.swift */; };
-		281B284626C56F5200636A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B284526C56F5200636A0D /* ViewController.swift */; };
+		281B284626C56F5200636A0D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B284526C56F5200636A0D /* OnboardingViewController.swift */; };
 		281B284926C56F5200636A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281B284726C56F5200636A0D /* Main.storyboard */; };
 		281B284C26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 281B284A26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld */; };
 		281B284E26C56F5400636A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281B284D26C56F5400636A0D /* Assets.xcassets */; };
 		281B285126C56F5400636A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281B284F26C56F5400636A0D /* LaunchScreen.storyboard */; };
+		281B285F26C57DDE00636A0D /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B285E26C57DDE00636A0D /* OnboardingSlide.swift */; };
+		281B286126C57F3800636A0D /* OnboardingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B286026C57F3800636A0D /* OnboardingViewCell.swift */; };
+		281B286526C58CE400636A0D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B286426C58CE400636A0D /* SignInViewController.swift */; };
+		281B286B26C81FA700636A0D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B286A26C81FA700636A0D /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		281B283E26C56F5200636A0D /* FoodOrderingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281B284126C56F5200636A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		281B284326C56F5200636A0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		281B284526C56F5200636A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		281B284526C56F5200636A0D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		281B284826C56F5200636A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		281B284B26C56F5200636A0D /* FoodOrderingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodOrderingApp.xcdatamodel; sourceTree = "<group>"; };
 		281B284D26C56F5400636A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		281B285026C56F5400636A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		281B285226C56F5400636A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		281B285E26C57DDE00636A0D /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		281B286026C57F3800636A0D /* OnboardingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewCell.swift; sourceTree = "<group>"; };
+		281B286426C58CE400636A0D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		281B286A26C81FA700636A0D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,13 @@
 		281B284026C56F5200636A0D /* FoodOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
+				281B286626C594DC00636A0D /* Extensions */,
+				281B285826C57D6D00636A0D /* Service */,
+				281B285B26C57D8600636A0D /* Models */,
+				281B285A26C57D8000636A0D /* Views */,
+				281B285926C57D7300636A0D /* Controllers */,
 				281B284126C56F5200636A0D /* AppDelegate.swift */,
 				281B284326C56F5200636A0D /* SceneDelegate.swift */,
-				281B284526C56F5200636A0D /* ViewController.swift */,
 				281B284726C56F5200636A0D /* Main.storyboard */,
 				281B284D26C56F5400636A0D /* Assets.xcassets */,
 				281B284F26C56F5400636A0D /* LaunchScreen.storyboard */,
@@ -68,6 +80,86 @@
 				281B284A26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld */,
 			);
 			path = FoodOrderingApp;
+			sourceTree = "<group>";
+		};
+		281B285826C57D6D00636A0D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		281B285926C57D7300636A0D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				281B286926C81F8E00636A0D /* SignUp */,
+				281B286326C58CAF00636A0D /* SıgnIn */,
+				281B285C26C57DA600636A0D /* Onboarding */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		281B285A26C57D8000636A0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				281B286226C57F3C00636A0D /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		281B285B26C57D8600636A0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				281B285D26C57DC700636A0D /* Onboarding */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		281B285C26C57DA600636A0D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				281B284526C56F5200636A0D /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		281B285D26C57DC700636A0D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				281B285E26C57DDE00636A0D /* OnboardingSlide.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		281B286226C57F3C00636A0D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				281B286026C57F3800636A0D /* OnboardingViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		281B286326C58CAF00636A0D /* SıgnIn */ = {
+			isa = PBXGroup;
+			children = (
+				281B286426C58CE400636A0D /* SignInViewController.swift */,
+			);
+			path = "SıgnIn";
+			sourceTree = "<group>";
+		};
+		281B286626C594DC00636A0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		281B286926C81F8E00636A0D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				281B286A26C81FA700636A0D /* SignUpViewController.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				281B284626C56F5200636A0D /* ViewController.swift in Sources */,
+				281B286526C58CE400636A0D /* SignInViewController.swift in Sources */,
+				281B285F26C57DDE00636A0D /* OnboardingSlide.swift in Sources */,
+				281B286B26C81FA700636A0D /* SignUpViewController.swift in Sources */,
+				281B284626C56F5200636A0D /* OnboardingViewController.swift in Sources */,
 				281B284226C56F5200636A0D /* AppDelegate.swift in Sources */,
 				281B284426C56F5200636A0D /* SceneDelegate.swift in Sources */,
 				281B284C26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld in Sources */,
+				281B286126C57F3800636A0D /* OnboardingViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
