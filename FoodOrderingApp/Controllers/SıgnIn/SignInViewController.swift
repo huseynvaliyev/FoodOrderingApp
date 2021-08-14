@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
@@ -53,12 +54,20 @@ class SignInViewController: UIViewController {
         connectGoogleButton.setImage(#imageLiteral(resourceName: "icon-google"), for: .normal)
         connectGoogleButton.tintColor = .white
         connectGoogleButton.imageView?.contentMode = .scaleAspectFit
-        connectGoogleButton.imageEdgeInsets = UIEdgeInsets(top: 12, left: -40, bottom: 12, right: 0)
+        connectGoogleButton.imageEdgeInsets = UIEdgeInsets(top: 12, left: -45, bottom: 12, right: 0)
         
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
-        
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                self.errorLabel.text = error?.localizedDescription
+            }
+            let getLocationController = self.storyboard?.instantiateViewController(identifier: "getLocation") as! GetLocationViewController
+            self.present(getLocationController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func connectWithFacebookTapped(_ sender: Any) {
