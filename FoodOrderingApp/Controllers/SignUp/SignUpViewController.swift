@@ -91,8 +91,11 @@ class SignUpViewController: UIViewController {
                 if error != nil {
                     self.errorLabel.text = error?.localizedDescription
                 } else {
+                    guard let result = result else { return }
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["fullname": fullname, "email": email, "id": result!.user.uid]) { err in
+                    let defaults = UserDefaults.standard
+                    defaults.setValue(result.user.uid, forKey: "userId")
+                    db.collection("users").document(result.user.uid).setData(["fullname": fullname, "email": email, "id": result.user.uid, "location": ""]) { err in
                         if err != nil {
                             self.errorLabel.text = "Error happening saving user data."
                         }
