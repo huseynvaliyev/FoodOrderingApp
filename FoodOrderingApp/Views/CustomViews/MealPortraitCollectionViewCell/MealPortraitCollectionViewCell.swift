@@ -23,7 +23,7 @@ class MealPortraitCollectionViewCell: UICollectionViewCell {
         mealNameLabel.text = meal.name
         mealCategoryLabel.text = meal.category
         mealCountryLabel.text = meal.country
-        mealImage.kf.setImage(with: URL(string: meal.image))
+        mealImage.kf.setImage(with: URL(string: meal.image ?? ""))
     }
     
 }

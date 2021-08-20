@@ -13,31 +13,55 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var chefSpecialsCollectionView: UICollectionView!
     
-    var categories: [MealCategory] = [
-        .init(id: "1", name: "Beef", image: "https://www.themealdb.com/images/category/beef.png"),
-        .init(id: "2", name: "Chicken", image: "https://www.themealdb.com/images/category/chicken.png"),
-        .init(id: "3", name: "Dessert", image: "https://www.themealdb.com/images/category/dessert.png"),
-        .init(id: "4", name: "Lamb", image: "https://www.themealdb.com/images/category/lamb.png"),
-        .init(id: "4", name: "Lamb", image: "https://www.themealdb.com/images/category/lamb.png")
-    ]
+    var categories: [MealCategory] = []
     
-    var popularMeals: [Meal] = [
-        .init(id: "53062", name: "Walnut Roll Gužvara", image: "https://www.themealdb.com/images/media/meals/u9l7k81628771647.jpg", country: "Croatian", category: "Dessert",instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar."),
-        .init(id: "53061", name: "Fresh sardines", image: "https://www.themealdb.com/images/media/meals/nv5lf31628771380.jpg", country: "Croatian", category: "Side", instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar."),
-        .init(id: "53060", name: "Burek", image: "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg", country: "Croatian", category: "Side",instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar."),
-        .init(id: "53059", name: "Mushroom soup with buckwheat", image: "https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg", country: "Croatian", category: "Side",instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar.")
-    ]
+    var popularMeals: [Meal] = []
     
-    var chefsMeals: [Meal] = [
-        .init(id: "52824", name: "Beef Sunday Roast", image: "https://www.themealdb.com/images/media/meals/ssrrrs1503664277.jpg", country: "British", category: "Beef", instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar."),
-        .init(id: "52861", name: "Peanut Butter Cheesecake", image: "https://www.themealdb.com/images/media/meals/qtuuys1511387068.jpg", country: "American", category: "Dessert", instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar."),
-        .init(id: "52880", name: "McSinghs Scotch pie", image: "https://www.themealdb.com/images/media/meals/vssrtx1511557680.jpg", country: "British", category: "Lamb", instruction: "Mix all the ingredients for the dough together and knead well. Cover the dough and put to rise until doubled in size which should take about 2 hours. Knock back the dough and knead lightly. Divide the dough into two equal pieces; roll each piece into an oblong about 12 inches by 8 inches. Mix the filling ingredients together and divide between the dough, spreading over each piece. Roll up the oblongs as tightly as possible to give two 12 inch sausages. Place these side by side, touching each other, on a greased baking sheet. Cover and leave to rise for about 40 minutes. Heat oven to 200ºC (425ºF). Bake for 30-35 minutes until well risen and golden brown. Bread should sound hollow when the base is tapped. Remove from oven and brush the hot bread top with milk. Sift with a generous covering of icing sugar.")
-        
-    ]
+    var chefsMeals: [Meal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
+        fetchData()
+    }
+    
+    private func fetchData() {
+        let dispachGroup = DispatchGroup()
+        dispachGroup.enter()
+        NetworkService.shared.getPopularMeal { [weak self] (result) in
+            switch result {
+            case .success(let popular):
+                self?.popularMeals = popular.meals
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            dispachGroup.leave()
+        }
+        dispachGroup.enter()
+        NetworkService.shared.getChefsMels { [weak self] (result) in
+            switch result {
+            case .success(let chefs):
+                self?.chefsMeals = chefs.meals
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            dispachGroup.leave()
+        }
+        dispachGroup.enter()
+        NetworkService.shared.getCategories { [weak self] (result) in
+            switch result{
+            case .success(let categoryArray):
+                self?.categories = categoryArray.categories
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+            dispachGroup.leave()
+        }
+        dispachGroup.notify(queue: .main) {
+            self.popularCollectionView.reloadData()
+            self.chefSpecialsCollectionView.reloadData()
+            self.categoryCollectionView.reloadData()
+        }
     }
     
     private func registerCells() {
@@ -89,7 +113,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             navigationController?.pushViewController(controller, animated: true)
         } else {
             let controller = self.storyboard?.instantiateViewController(identifier: "MealDetailViewController") as! MealDetailViewController
-            controller.meal = collectionView == popularCollectionView ? popularMeals[indexPath.item] : chefsMeals[indexPath.item]
+            controller.mealId = collectionView == popularCollectionView ? popularMeals[indexPath.item].id : chefsMeals[indexPath.item].id
             navigationController?.pushViewController(controller, animated: true)
         }
     }

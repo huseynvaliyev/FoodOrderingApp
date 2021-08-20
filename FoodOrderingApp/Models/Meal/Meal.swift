@@ -7,14 +7,18 @@
 
 import Foundation
 
+struct MealsRoot: Decodable {
+    let meals: [Meal]
+}
+
 struct Meal: Decodable {
     
-    let id: String
-    let name: String
-    let image: String
-    let country: String
-    let category: String
-    let instruction: String
+    let id: String?
+    let name: String?
+    let image: String?
+    let country: String?
+    let category: String?
+    let instruction: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"

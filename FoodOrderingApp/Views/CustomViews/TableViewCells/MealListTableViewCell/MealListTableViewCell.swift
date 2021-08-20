@@ -13,12 +13,10 @@ class MealListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mealImage: UIImageView!
     @IBOutlet weak var mealNameLabel: UILabel!
-    @IBOutlet weak var mealCountryLabel: UILabel!
     
     func setup(meal: Meal) {
-        mealImage.kf.setImage(with: URL(string: meal.image))
+        mealImage.kf.setImage(with: URL(string: meal.image ?? ""))
         mealNameLabel.text = meal.name
-        mealCountryLabel.text = meal.country
     }
     
 }

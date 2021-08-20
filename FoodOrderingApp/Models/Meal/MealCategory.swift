@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct CategoriesRoot: Decodable {
+    let categories: [MealCategory]
+}
+
 struct MealCategory: Decodable {
     let id: String
     let name: String

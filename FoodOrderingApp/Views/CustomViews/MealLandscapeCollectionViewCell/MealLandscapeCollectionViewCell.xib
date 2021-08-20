@@ -64,7 +64,9 @@
                             <constraint firstItem="k9U-Zc-9ch" firstAttribute="bottom" secondItem="Ny9-WR-uTk" secondAttribute="bottom" id="Jay-g4-wPi"/>
                             <constraint firstItem="Ny9-WR-uTk" firstAttribute="leading" secondItem="Mea-if-6Pa" secondAttribute="leading" constant="16" id="Ru1-T7-RtV"/>
                             <constraint firstItem="k9U-Zc-9ch" firstAttribute="top" secondItem="Ny9-WR-uTk" secondAttribute="top" id="XkY-Lw-Fsm"/>
+                            <constraint firstAttribute="height" constant="100" id="Yyi-yt-BbJ"/>
                             <constraint firstAttribute="trailing" secondItem="k9U-Zc-9ch" secondAttribute="trailing" constant="16" id="dJT-lx-Xcu"/>
+                            <constraint firstAttribute="width" constant="330" id="dcN-iQ-m7a"/>
                             <constraint firstItem="Ny9-WR-uTk" firstAttribute="top" secondItem="Mea-if-6Pa" secondAttribute="top" constant="16" id="v2N-9U-g1l"/>
                         </constraints>
                     </view>

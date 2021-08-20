@@ -33,6 +33,11 @@
 		28485E6B26D035D300146837 /* CategoryMealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6A26D035D300146837 /* CategoryMealListViewController.swift */; };
 		28485E7026D0370500146837 /* MealListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6E26D0370500146837 /* MealListTableViewCell.swift */; };
 		28485E7126D0370500146837 /* MealListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28485E6F26D0370500146837 /* MealListTableViewCell.xib */; };
+		28485E7326D04B6500146837 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7226D04B6500146837 /* ApiResponse.swift */; };
+		28485E7526D04BAA00146837 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7426D04BAA00146837 /* AppError.swift */; };
+		28485E7726D04BCE00146837 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7626D04BCE00146837 /* Methods.swift */; };
+		28485E7926D04BEE00146837 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7826D04BEE00146837 /* Route.swift */; };
+		28485E7B26D04EF400146837 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7A26D04EF400146837 /* NetworkService.swift */; };
 		28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2826CD62A70015DA92 /* HomeViewController.swift */; };
 		28864C2F26CEBDD70015DA92 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */; };
 		28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */; };
@@ -66,6 +71,11 @@
 		28485E6A26D035D300146837 /* CategoryMealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMealListViewController.swift; sourceTree = "<group>"; };
 		28485E6E26D0370500146837 /* MealListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewCell.swift; sourceTree = "<group>"; };
 		28485E6F26D0370500146837 /* MealListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealListTableViewCell.xib; sourceTree = "<group>"; };
+		28485E7226D04B6500146837 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		28485E7426D04BAA00146837 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		28485E7626D04BCE00146837 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
+		28485E7826D04BEE00146837 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		28485E7A26D04EF400146837 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		28864C2826CD62A70015DA92 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -108,7 +118,6 @@
 		281B284026C56F5200636A0D /* FoodOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
-				281B286626C594DC00636A0D /* Extensions */,
 				281B285826C57D6D00636A0D /* Service */,
 				281B285B26C57D8600636A0D /* Models */,
 				281B285A26C57D8000636A0D /* Views */,
@@ -128,6 +137,11 @@
 		281B285826C57D6D00636A0D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				28485E7A26D04EF400146837 /* NetworkService.swift */,
+				28485E7826D04BEE00146837 /* Route.swift */,
+				28485E7626D04BCE00146837 /* Methods.swift */,
+				28485E7426D04BAA00146837 /* AppError.swift */,
+				28485E7226D04B6500146837 /* ApiResponse.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -194,13 +208,6 @@
 				281B286426C58CE400636A0D /* SignInViewController.swift */,
 			);
 			path = "SıgnIn";
-			sourceTree = "<group>";
-		};
-		281B286626C594DC00636A0D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		281B286926C81F8E00636A0D /* SignUp */ = {
@@ -411,16 +418,21 @@
 				281B284626C56F5200636A0D /* OnboardingViewController.swift in Sources */,
 				281B284226C56F5200636A0D /* AppDelegate.swift in Sources */,
 				28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */,
+				28485E7926D04BEE00146837 /* Route.swift in Sources */,
+				28485E7B26D04EF400146837 /* NetworkService.swift in Sources */,
 				28485E5D26CF8B2300146837 /* MealPortraitCollectionViewCell.swift in Sources */,
+				28485E7726D04BCE00146837 /* Methods.swift in Sources */,
 				28864C3326CEBFC50015DA92 /* MealCategory.swift in Sources */,
 				28485E7026D0370500146837 /* MealListTableViewCell.swift in Sources */,
 				28864C3926CEC1430015DA92 /* CardView.swift in Sources */,
+				28485E7326D04B6500146837 /* ApiResponse.swift in Sources */,
 				281B284426C56F5200636A0D /* SceneDelegate.swift in Sources */,
 				28485E6026CF8FE500146837 /* Meal.swift in Sources */,
 				281B287E26C838FD00636A0D /* GetLocationViewController.swift in Sources */,
 				28864C2F26CEBDD70015DA92 /* CategoryCollectionViewCell.swift in Sources */,
 				281B284C26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld in Sources */,
 				281B286126C57F3800636A0D /* OnboardingViewCell.swift in Sources */,
+				28485E7526D04BAA00146837 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
