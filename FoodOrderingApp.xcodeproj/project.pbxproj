@@ -30,6 +30,9 @@
 		28485E6426CFA80400146837 /* MealLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6226CFA80400146837 /* MealLandscapeCollectionViewCell.swift */; };
 		28485E6526CFA80400146837 /* MealLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28485E6326CFA80400146837 /* MealLandscapeCollectionViewCell.xib */; };
 		28485E6826D00BE000146837 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6726D00BE000146837 /* MealDetailViewController.swift */; };
+		28485E6B26D035D300146837 /* CategoryMealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6A26D035D300146837 /* CategoryMealListViewController.swift */; };
+		28485E7026D0370500146837 /* MealListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E6E26D0370500146837 /* MealListTableViewCell.swift */; };
+		28485E7126D0370500146837 /* MealListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28485E6F26D0370500146837 /* MealListTableViewCell.xib */; };
 		28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2826CD62A70015DA92 /* HomeViewController.swift */; };
 		28864C2F26CEBDD70015DA92 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */; };
 		28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */; };
@@ -60,6 +63,9 @@
 		28485E6226CFA80400146837 /* MealLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		28485E6326CFA80400146837 /* MealLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		28485E6726D00BE000146837 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		28485E6A26D035D300146837 /* CategoryMealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMealListViewController.swift; sourceTree = "<group>"; };
+		28485E6E26D0370500146837 /* MealListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewCell.swift; sourceTree = "<group>"; };
+		28485E6F26D0370500146837 /* MealListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealListTableViewCell.xib; sourceTree = "<group>"; };
 		28864C2826CD62A70015DA92 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		281B285926C57D7300636A0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28485E6926D035A700146837 /* CategoryMealList */,
 				28485E6626D00BBF00146837 /* MealDetail */,
 				28864C2726CD62970015DA92 /* Home */,
 				281B287C26C838DB00636A0D /* GetLocation */,
@@ -238,6 +245,31 @@
 			path = MealDetail;
 			sourceTree = "<group>";
 		};
+		28485E6926D035A700146837 /* CategoryMealList */ = {
+			isa = PBXGroup;
+			children = (
+				28485E6A26D035D300146837 /* CategoryMealListViewController.swift */,
+			);
+			path = CategoryMealList;
+			sourceTree = "<group>";
+		};
+		28485E6C26D036B200146837 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				28485E6D26D036CB00146837 /* MealListTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		28485E6D26D036CB00146837 /* MealListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				28485E6F26D0370500146837 /* MealListTableViewCell.xib */,
+				28485E6E26D0370500146837 /* MealListTableViewCell.swift */,
+			);
+			path = MealListTableViewCell;
+			sourceTree = "<group>";
+		};
 		28864C2726CD62970015DA92 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +281,7 @@
 		28864C2A26CEBD700015DA92 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				28485E6C26D036B200146837 /* TableViewCells */,
 				28485E6126CFA7DD00146837 /* MealLandscapeCollectionViewCell */,
 				28864C3726CEC12F0015DA92 /* CardView */,
 				28485E5A26CF8A4D00146837 /* MealPortraitCollectionViewCell */,
@@ -351,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28485E7126D0370500146837 /* MealListTableViewCell.xib in Resources */,
 				281B285126C56F5400636A0D /* LaunchScreen.storyboard in Resources */,
 				28485E6526CFA80400146837 /* MealLandscapeCollectionViewCell.xib in Resources */,
 				28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */,
@@ -369,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				281B286526C58CE400636A0D /* SignInViewController.swift in Sources */,
+				28485E6B26D035D300146837 /* CategoryMealListViewController.swift in Sources */,
 				28485E6826D00BE000146837 /* MealDetailViewController.swift in Sources */,
 				28485E6426CFA80400146837 /* MealLandscapeCollectionViewCell.swift in Sources */,
 				281B285F26C57DDE00636A0D /* OnboardingSlide.swift in Sources */,
@@ -378,6 +413,7 @@
 				28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */,
 				28485E5D26CF8B2300146837 /* MealPortraitCollectionViewCell.swift in Sources */,
 				28864C3326CEBFC50015DA92 /* MealCategory.swift in Sources */,
+				28485E7026D0370500146837 /* MealListTableViewCell.swift in Sources */,
 				28864C3926CEC1430015DA92 /* CardView.swift in Sources */,
 				281B284426C56F5200636A0D /* SceneDelegate.swift in Sources */,
 				28485E6026CF8FE500146837 /* Meal.swift in Sources */,

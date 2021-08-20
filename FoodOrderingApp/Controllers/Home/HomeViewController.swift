@@ -84,7 +84,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView {
-            
+            let controller = self.storyboard?.instantiateViewController(identifier: "CategoryMealListViewController") as! CategoryMealListViewController
+            controller.category = categories[indexPath.item]
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             let controller = self.storyboard?.instantiateViewController(identifier: "MealDetailViewController") as! MealDetailViewController
             controller.meal = collectionView == popularCollectionView ? popularMeals[indexPath.item] : chefsMeals[indexPath.item]

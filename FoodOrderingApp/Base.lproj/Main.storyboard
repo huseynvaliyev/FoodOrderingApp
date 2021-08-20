@@ -658,7 +658,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="f1Z-V5-uvb" customClass="HomeViewController" customModule="FoodOrderingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7QC-cx-rjl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7J-aO-gRs">
@@ -914,7 +914,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clE-zZ-rGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5021.739130434783" y="-583.25892857142856"/>
+            <point key="canvasLocation" x="4965" y="-583"/>
+        </scene>
+        <!--Category Meal List View Controller-->
+        <scene sceneID="A6K-NC-CA7">
+            <objects>
+                <viewController storyboardIdentifier="CategoryMealListViewController" id="WLy-a3-88t" customClass="CategoryMealListViewController" customModule="FoodOrderingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRo-PE-iWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AKO-ll-h4k">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WLy-a3-88t" id="7N0-O0-oyk"/>
+                                    <outlet property="delegate" destination="WLy-a3-88t" id="I6n-GC-5SL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L8v-Hs-zy7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AKO-ll-h4k" firstAttribute="leading" secondItem="L8v-Hs-zy7" secondAttribute="leading" id="7Qp-6l-zQI"/>
+                            <constraint firstItem="AKO-ll-h4k" firstAttribute="bottom" secondItem="L8v-Hs-zy7" secondAttribute="bottom" id="ABC-f3-b7f"/>
+                            <constraint firstAttribute="trailing" secondItem="AKO-ll-h4k" secondAttribute="trailing" id="GEj-52-Mii"/>
+                            <constraint firstItem="AKO-ll-h4k" firstAttribute="top" secondItem="L8v-Hs-zy7" secondAttribute="top" id="ixS-Fh-Did"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mealListTableView" destination="AKO-ll-h4k" id="PpS-mU-2Px"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7U-wg-1vY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5718.840579710145" y="-583.25892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DiY-6Z-Tfx">
