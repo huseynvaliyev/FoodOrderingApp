@@ -966,11 +966,65 @@
                     </tabBar>
                     <connections>
                         <segue destination="DU9-Wr-iMx" kind="relationship" relationship="viewControllers" id="0lk-KT-V4s"/>
+                        <segue destination="OUi-9M-TnC" kind="relationship" relationship="viewControllers" id="WFV-Jo-NYW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J36-LW-81j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737.68115942029" y="132.58928571428572"/>
+            <point key="canvasLocation" x="2730" y="133"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="5fc-5Y-ge7">
+            <objects>
+                <viewController id="4Yw-aL-DxX" customClass="SearchViewController" customModule="FoodOrderingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNc-NK-2pd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXC-Fo-WVd">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4Yw-aL-DxX" id="VDV-8L-UTo"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SDx-GB-mNy">
+                                <rect key="frame" x="0.0" y="107" width="414" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="gDm-YM-JCV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Yw-aL-DxX" id="73F-AP-bt1"/>
+                                    <outlet property="delegate" destination="4Yw-aL-DxX" id="OHh-57-i9Y"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DAb-YO-e5b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zXC-Fo-WVd" firstAttribute="trailing" secondItem="DAb-YO-e5b" secondAttribute="trailing" id="30f-HA-Xqo"/>
+                            <constraint firstItem="SDx-GB-mNy" firstAttribute="top" secondItem="zXC-Fo-WVd" secondAttribute="bottom" id="8AC-Xu-86n"/>
+                            <constraint firstItem="SDx-GB-mNy" firstAttribute="leading" secondItem="DAb-YO-e5b" secondAttribute="leading" id="hkK-RX-xMg"/>
+                            <constraint firstItem="zXC-Fo-WVd" firstAttribute="top" secondItem="DAb-YO-e5b" secondAttribute="top" id="j4Q-61-L3I"/>
+                            <constraint firstItem="SDx-GB-mNy" firstAttribute="trailing" secondItem="DAb-YO-e5b" secondAttribute="trailing" id="pSn-fT-JkY"/>
+                            <constraint firstItem="SDx-GB-mNy" firstAttribute="bottom" secondItem="DAb-YO-e5b" secondAttribute="bottom" id="wUY-ka-MnQ"/>
+                            <constraint firstItem="zXC-Fo-WVd" firstAttribute="leading" secondItem="DAb-YO-e5b" secondAttribute="leading" id="wtj-cc-ESZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="3V2-lP-eQC"/>
+                    <connections>
+                        <outlet property="searchBar" destination="zXC-Fo-WVd" id="ctH-Em-lM3"/>
+                        <outlet property="searchCollectionView" destination="SDx-GB-mNy" id="aAk-UI-Tfy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQj-Ya-Wzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4234.7826086956529" y="132.58928571428572"/>
         </scene>
         <!--Home-->
         <scene sceneID="4SW-Rm-nvi">
@@ -993,13 +1047,35 @@
             </objects>
             <point key="canvasLocation" x="3517" y="-583"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="DKx-aQ-nNx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OUi-9M-TnC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="jEZ-ru-lYh">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u8g-Jw-AE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Yw-aL-DxX" kind="relationship" relationship="rootViewController" id="7u6-nw-eRH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOZ-8F-yGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="133"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DSK-oN-GzG"/>
+        <segue reference="09B-hi-qm2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="home" width="24" height="24"/>
         <image name="logo" width="65" height="65"/>
+        <image name="search" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

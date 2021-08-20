@@ -47,8 +47,6 @@ struct NetworkService {
             var result: Result<Data, Error>?
             if let data = data {
                 result = .success(data)
-                let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
-                print("The response is:\n \(responseString)")
             } else if let error = error {
                 result = .failure(error)
                 print("The error is: \(error.localizedDescription)")

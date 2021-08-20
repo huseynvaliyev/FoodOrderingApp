@@ -81,11 +81,9 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func approveLocation(_ sender: Any) {
         let db = Firestore.firestore()
         let defaults = UserDefaults.standard
-        guard let town = townTextField.text else { return }
         guard let street = streetTextField.text else { return }
-        guard let district = districtTextField.text else { return }
         guard let doorNo = doorNoTextField.text else { return }
-        let location = "\(street)/ \(doorNo)/ \(town)/ \(district)"
+        let location = "\(street) \(doorNo)"
         db.collection("users").document(defaults.object(forKey: "userId") as! String).updateData(["location": location]) { err in
             if let err = err {
                 print("Error updating document: \(err)")

@@ -38,6 +38,8 @@
 		28485E7726D04BCE00146837 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7626D04BCE00146837 /* Methods.swift */; };
 		28485E7926D04BEE00146837 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7826D04BEE00146837 /* Route.swift */; };
 		28485E7B26D04EF400146837 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7A26D04EF400146837 /* NetworkService.swift */; };
+		28485E7E26D06FEE00146837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7D26D06FEE00146837 /* SearchViewController.swift */; };
+		28485E8126D074B300146837 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E8026D074B300146837 /* UICollectionView+Extension.swift */; };
 		28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2826CD62A70015DA92 /* HomeViewController.swift */; };
 		28864C2F26CEBDD70015DA92 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */; };
 		28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */; };
@@ -76,6 +78,8 @@
 		28485E7626D04BCE00146837 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
 		28485E7826D04BEE00146837 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		28485E7A26D04EF400146837 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		28485E7D26D06FEE00146837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		28485E8026D074B300146837 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		28864C2826CD62A70015DA92 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		281B284026C56F5200636A0D /* FoodOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
+				28485E7F26D0749600146837 /* Extensions */,
 				281B285826C57D6D00636A0D /* Service */,
 				281B285B26C57D8600636A0D /* Models */,
 				281B285A26C57D8000636A0D /* Views */,
@@ -149,6 +154,7 @@
 		281B285926C57D7300636A0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28485E7C26D06FD800146837 /* Search */,
 				28485E6926D035A700146837 /* CategoryMealList */,
 				28485E6626D00BBF00146837 /* MealDetail */,
 				28864C2726CD62970015DA92 /* Home */,
@@ -275,6 +281,22 @@
 				28485E6E26D0370500146837 /* MealListTableViewCell.swift */,
 			);
 			path = MealListTableViewCell;
+			sourceTree = "<group>";
+		};
+		28485E7C26D06FD800146837 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				28485E7D26D06FEE00146837 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		28485E7F26D0749600146837 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28485E8026D074B300146837 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		28864C2726CD62970015DA92 /* Home */ = {
@@ -415,6 +437,7 @@
 				28485E6426CFA80400146837 /* MealLandscapeCollectionViewCell.swift in Sources */,
 				281B285F26C57DDE00636A0D /* OnboardingSlide.swift in Sources */,
 				281B286B26C81FA700636A0D /* SignUpViewController.swift in Sources */,
+				28485E8126D074B300146837 /* UICollectionView+Extension.swift in Sources */,
 				281B284626C56F5200636A0D /* OnboardingViewController.swift in Sources */,
 				281B284226C56F5200636A0D /* AppDelegate.swift in Sources */,
 				28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */,
@@ -424,6 +447,7 @@
 				28485E7726D04BCE00146837 /* Methods.swift in Sources */,
 				28864C3326CEBFC50015DA92 /* MealCategory.swift in Sources */,
 				28485E7026D0370500146837 /* MealListTableViewCell.swift in Sources */,
+				28485E7E26D06FEE00146837 /* SearchViewController.swift in Sources */,
 				28864C3926CEC1430015DA92 /* CardView.swift in Sources */,
 				28485E7326D04B6500146837 /* ApiResponse.swift in Sources */,
 				281B284426C56F5200636A0D /* SceneDelegate.swift in Sources */,

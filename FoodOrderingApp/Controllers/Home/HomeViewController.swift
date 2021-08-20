@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,18 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let db = Firestore.firestore()
+        let defaults = UserDefaults.standard
+        let docRef = db.collection("users").document(defaults.object(forKey: "userId") as! String)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let location = document.get("location")
+                guard let location = location else { return }
+                self.navigationItem.title = location as? String
+            } else {
+                print("Document does not exist")
+            }
+        }
         registerCells()
         fetchData()
     }
