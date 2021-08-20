@@ -85,9 +85,7 @@ class GetLocationViewController: UIViewController, CLLocationManagerDelegate {
         guard let street = streetTextField.text else { return }
         guard let district = districtTextField.text else { return }
         guard let doorNo = doorNoTextField.text else { return }
-        guard let city = cityTextField.text else { return }
-        guard let country = countryTextField.text else { return }
-        let location = "\(street)/ \(doorNo)/ \(town)/ \(district)/ \(city)/ \(country)"
+        let location = "\(street)/ \(doorNo)/ \(town)/ \(district)"
         db.collection("users").document(defaults.object(forKey: "userId") as! String).updateData(["location": location]) { err in
             if let err = err {
                 print("Error updating document: \(err)")

@@ -78,8 +78,4 @@ class SignInViewController: UIViewController {
         
     }
     
-    @IBAction func createNewAccountTapped(_ sender: Any) {
-        
-    }
-    
 }
