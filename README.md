@@ -32,4 +32,4 @@ Incomplete features are being worked on.
 | ![onboarding](gifs/onboarding.gif) | ![sign](gifs/signIn:Up.gif) | ![location](gifs/getLocation.gif) | ![home](gifs/home.gif) | ![search](gifs/search.gif) | ![order](gifs/order.gif) |
 
 
-Your Name – [@Whosein](https://twitter.com/valiyevhuseyn) – huseynvaliyev98@gmail.com
+Huseyn Valiyev – [@Whosein](https://twitter.com/valiyevhuseyn) – huseynvaliyev98@gmail.com
