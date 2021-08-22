@@ -967,6 +967,7 @@
                     <connections>
                         <segue destination="DU9-Wr-iMx" kind="relationship" relationship="viewControllers" id="0lk-KT-V4s"/>
                         <segue destination="OUi-9M-TnC" kind="relationship" relationship="viewControllers" id="WFV-Jo-NYW"/>
+                        <segue destination="gKW-6v-qR8" kind="relationship" relationship="viewControllers" id="4yx-4X-rMt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J36-LW-81j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1068,13 +1069,91 @@
             </objects>
             <point key="canvasLocation" x="3516" y="133"/>
         </scene>
+        <!--Orders-->
+        <scene sceneID="6iW-sW-F5Q">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="XxS-QR-5WM" customClass="OrderViewController" customModule="FoodOrderingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="izq-Kb-lWi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-Go-Hay">
+                                <rect key="frame" x="16" y="693" width="382" height="50"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.65490196079999996" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SpQ-9D-olj"/>
+                                </constraints>
+                                <state key="normal" title="CHECKOUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2J8-7R-kCs">
+                                <rect key="frame" x="0.0" y="56" width="414" height="621"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZbW-dh-kbL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XxS-QR-5WM" id="LDL-s5-Ci7"/>
+                                    <outlet property="delegate" destination="XxS-QR-5WM" id="wui-aR-Cns"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fyL-4f-1jG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fyL-4f-1jG" firstAttribute="bottom" secondItem="FVU-Go-Hay" secondAttribute="bottom" constant="16" id="AZQ-8C-egz"/>
+                            <constraint firstItem="FVU-Go-Hay" firstAttribute="leading" secondItem="fyL-4f-1jG" secondAttribute="leading" constant="16" id="LET-cb-EQX"/>
+                            <constraint firstItem="fyL-4f-1jG" firstAttribute="trailing" secondItem="2J8-7R-kCs" secondAttribute="trailing" id="OZc-1H-klk"/>
+                            <constraint firstItem="2J8-7R-kCs" firstAttribute="leading" secondItem="fyL-4f-1jG" secondAttribute="leading" id="Tn4-Mt-Bd4"/>
+                            <constraint firstItem="FVU-Go-Hay" firstAttribute="top" secondItem="2J8-7R-kCs" secondAttribute="bottom" constant="16" id="lQH-IX-RPk"/>
+                            <constraint firstItem="fyL-4f-1jG" firstAttribute="trailing" secondItem="FVU-Go-Hay" secondAttribute="trailing" constant="16" id="rVA-q0-rgu"/>
+                            <constraint firstItem="2J8-7R-kCs" firstAttribute="top" secondItem="fyL-4f-1jG" secondAttribute="top" id="uac-36-lre"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Orders" id="Dom-c1-2aS"/>
+                    <connections>
+                        <outlet property="checkOutButton" destination="FVU-Go-Hay" id="pNF-9x-Khx"/>
+                        <outlet property="orderCollectionView" destination="2J8-7R-kCs" id="Y9j-gi-wzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bK6-H3-7xI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4426.0869565217399" y="858.48214285714278"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="nSF-ik-1OX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gKW-6v-qR8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Order" image="order" id="hVl-Wg-KMV">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2D-Fi-YLB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XxS-QR-5WM" kind="relationship" relationship="rootViewController" id="4XL-wa-0oW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYC-h5-6O9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3515.9420289855075" y="858.48214285714278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="09B-hi-qm2"/>
+        <segue reference="DSK-oN-GzG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="home" width="24" height="24"/>
         <image name="logo" width="65" height="65"/>
+        <image name="order" width="24" height="24"/>
         <image name="search" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

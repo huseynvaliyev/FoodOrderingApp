@@ -46,7 +46,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if searching {
             if searchedMeals.count == 0 {
-                searchCollectionView.setEmptyView(title: "Sorry, the meal was not found.", message: "Try searching for another meal")
+                searchCollectionView.setEmptyView(title: "Sorry, the meal was not found.", message: "Try searching for another meal", messageImage: #imageLiteral(resourceName: "empty"))
             }
             return searchedMeals.count
         } else {

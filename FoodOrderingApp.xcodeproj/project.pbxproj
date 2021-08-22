@@ -40,12 +40,16 @@
 		28485E7B26D04EF400146837 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7A26D04EF400146837 /* NetworkService.swift */; };
 		28485E7E26D06FEE00146837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E7D26D06FEE00146837 /* SearchViewController.swift */; };
 		28485E8126D074B300146837 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E8026D074B300146837 /* UICollectionView+Extension.swift */; };
+		28485E8426D07F0000146837 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28485E8326D07F0000146837 /* OrderViewController.swift */; };
 		28864C2926CD62A70015DA92 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2826CD62A70015DA92 /* HomeViewController.swift */; };
 		28864C2F26CEBDD70015DA92 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */; };
 		28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */; };
 		28864C3326CEBFC50015DA92 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C3226CEBFC50015DA92 /* MealCategory.swift */; };
 		28864C3626CEC0990015DA92 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 28864C3526CEC0990015DA92 /* Kingfisher */; };
 		28864C3926CEC1430015DA92 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28864C3826CEC1430015DA92 /* CardView.swift */; };
+		28F6450226D24297009B1792 /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6450026D24297009B1792 /* OrderCollectionViewCell.swift */; };
+		28F6450326D24297009B1792 /* OrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F6450126D24297009B1792 /* OrderCollectionViewCell.xib */; };
+		28F6450626D2442B009B1792 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6450526D2442B009B1792 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,11 +84,15 @@
 		28485E7A26D04EF400146837 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		28485E7D26D06FEE00146837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		28485E8026D074B300146837 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		28485E8326D07F0000146837 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		28864C2826CD62A70015DA92 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		28864C2D26CEBDD70015DA92 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		28864C2E26CEBDD70015DA92 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		28864C3226CEBFC50015DA92 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
 		28864C3826CEC1430015DA92 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		28F6450026D24297009B1792 /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
+		28F6450126D24297009B1792 /* OrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCollectionViewCell.xib; sourceTree = "<group>"; };
+		28F6450526D2442B009B1792 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,7 @@
 		281B285926C57D7300636A0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28485E8226D07EED00146837 /* Order */,
 				28485E7C26D06FD800146837 /* Search */,
 				28485E6926D035A700146837 /* CategoryMealList */,
 				28485E6626D00BBF00146837 /* MealDetail */,
@@ -299,6 +308,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		28485E8226D07EED00146837 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				28485E8326D07F0000146837 /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		28485E8526D18FFB00146837 /* OrderCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				28F6450026D24297009B1792 /* OrderCollectionViewCell.swift */,
+				28F6450126D24297009B1792 /* OrderCollectionViewCell.xib */,
+			);
+			path = OrderCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		28864C2726CD62970015DA92 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +336,7 @@
 		28864C2A26CEBD700015DA92 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				28485E8526D18FFB00146837 /* OrderCollectionViewCell */,
 				28485E6C26D036B200146837 /* TableViewCells */,
 				28485E6126CFA7DD00146837 /* MealLandscapeCollectionViewCell */,
 				28864C3726CEC12F0015DA92 /* CardView */,
@@ -333,6 +360,7 @@
 			children = (
 				28864C3226CEBFC50015DA92 /* MealCategory.swift */,
 				28485E5F26CF8FE500146837 /* Meal.swift */,
+				28F6450526D2442B009B1792 /* Order.swift */,
 			);
 			path = Meal;
 			sourceTree = "<group>";
@@ -415,6 +443,7 @@
 			files = (
 				28485E7126D0370500146837 /* MealListTableViewCell.xib in Resources */,
 				281B285126C56F5400636A0D /* LaunchScreen.storyboard in Resources */,
+				28F6450326D24297009B1792 /* OrderCollectionViewCell.xib in Resources */,
 				28485E6526CFA80400146837 /* MealLandscapeCollectionViewCell.xib in Resources */,
 				28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */,
 				28485E5E26CF8B2300146837 /* MealPortraitCollectionViewCell.xib in Resources */,
@@ -434,6 +463,7 @@
 				281B286526C58CE400636A0D /* SignInViewController.swift in Sources */,
 				28485E6B26D035D300146837 /* CategoryMealListViewController.swift in Sources */,
 				28485E6826D00BE000146837 /* MealDetailViewController.swift in Sources */,
+				28F6450226D24297009B1792 /* OrderCollectionViewCell.swift in Sources */,
 				28485E6426CFA80400146837 /* MealLandscapeCollectionViewCell.swift in Sources */,
 				281B285F26C57DDE00636A0D /* OnboardingSlide.swift in Sources */,
 				281B286B26C81FA700636A0D /* SignUpViewController.swift in Sources */,
@@ -457,6 +487,8 @@
 				281B284C26C56F5200636A0D /* FoodOrderingApp.xcdatamodeld in Sources */,
 				281B286126C57F3800636A0D /* OnboardingViewCell.swift in Sources */,
 				28485E7526D04BAA00146837 /* AppError.swift in Sources */,
+				28485E8426D07F0000146837 /* OrderViewController.swift in Sources */,
+				28F6450626D2442B009B1792 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
