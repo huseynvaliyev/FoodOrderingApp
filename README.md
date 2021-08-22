@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this project, an attempt was made to simulate a food ordering application. In this project, an attempt was made to simulate a food ordering application. The user can create an order by logging in after first registering. The interface of the project was inspired by the [figma](https://www.figma.com/community/file/992304109173819815.) project.
+In this project, an attempt was made to simulate a food ordering application. In this project, an attempt was made to simulate a food ordering application. The user can create an order by logging in after first registering. The interface of the project was inspired by the [figma](https://www.figma.com/community/file/992304109173819815) project.
 
 ## Features
 
