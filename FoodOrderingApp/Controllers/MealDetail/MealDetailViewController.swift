@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import ProgressHUD
 
 class MealDetailViewController: UIViewController {
     
@@ -24,6 +25,7 @@ class MealDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addtoCartButton.layer.cornerRadius = 8
+        ProgressHUD.show()
         DispatchQueue.main.async {
             NetworkService.shared.getMealById(id: self.mealId) { [weak self] (result) in
                 switch result {
@@ -31,9 +33,11 @@ class MealDetailViewController: UIViewController {
                     self?.meal = mealArray.meals.first
                     self?.populateView()
                 case .failure(let error):
+                    ProgressHUD.showError(error.localizedDescription)
                     print("Error \(error.localizedDescription)")
                 }
             }
+            ProgressHUD.dismiss()
         }
     }
     

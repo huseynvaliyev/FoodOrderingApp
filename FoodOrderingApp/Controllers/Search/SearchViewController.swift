@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class SearchViewController: UIViewController {
     
@@ -27,15 +28,18 @@ class SearchViewController: UIViewController {
     }
     
     private func fetchData() {
+        ProgressHUD.show()
         NetworkService.shared.getChefsMels { [weak self] (result) in
             switch result {
             case .success(let mealArray):
                 self?.meals = mealArray.meals
                 self?.searchCollectionView.reloadData()
             case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
                 print("Error: \(error.localizedDescription)")
             }
         }
+        ProgressHUD.dismiss()
     }
     
 }

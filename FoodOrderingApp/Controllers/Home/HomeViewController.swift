@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     
@@ -39,6 +40,7 @@ class HomeViewController: UIViewController {
     }
     
     private func fetchData() {
+        ProgressHUD.show()
         let dispachGroup = DispatchGroup()
         dispachGroup.enter()
         NetworkService.shared.getPopularMeal { [weak self] (result) in
@@ -46,6 +48,7 @@ class HomeViewController: UIViewController {
             case .success(let popular):
                 self?.popularMeals = popular.meals
             case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
                 print(error.localizedDescription)
             }
             dispachGroup.leave()
@@ -56,6 +59,7 @@ class HomeViewController: UIViewController {
             case .success(let chefs):
                 self?.chefsMeals = chefs.meals
             case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
                 print(error.localizedDescription)
             }
             dispachGroup.leave()
@@ -66,6 +70,7 @@ class HomeViewController: UIViewController {
             case .success(let categoryArray):
                 self?.categories = categoryArray.categories
             case.failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
                 print(error.localizedDescription)
             }
             dispachGroup.leave()
@@ -74,6 +79,7 @@ class HomeViewController: UIViewController {
             self.popularCollectionView.reloadData()
             self.chefSpecialsCollectionView.reloadData()
             self.categoryCollectionView.reloadData()
+            ProgressHUD.dismiss()
         }
     }
     

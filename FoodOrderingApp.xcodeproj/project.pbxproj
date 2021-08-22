@@ -50,6 +50,8 @@
 		28F6450226D24297009B1792 /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6450026D24297009B1792 /* OrderCollectionViewCell.swift */; };
 		28F6450326D24297009B1792 /* OrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F6450126D24297009B1792 /* OrderCollectionViewCell.xib */; };
 		28F6450626D2442B009B1792 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6450526D2442B009B1792 /* Order.swift */; };
+		28F6450926D24BE8009B1792 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 28F6450826D24BE8009B1792 /* ProgressHUD */; };
+		28F6450B26D274AC009B1792 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 28F6450A26D274AC009B1792 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,7 @@
 		28F6450026D24297009B1792 /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		28F6450126D24297009B1792 /* OrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCollectionViewCell.xib; sourceTree = "<group>"; };
 		28F6450526D2442B009B1792 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		28F6450A26D274AC009B1792 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				281B288426CACD3000636A0D /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				281B288A26CACD3000636A0D /* FirebaseFirestore in Frameworks */,
 				281B288826CACD3000636A0D /* FirebaseAuth in Frameworks */,
+				28F6450926D24BE8009B1792 /* ProgressHUD in Frameworks */,
 				281B288626CACD3000636A0D /* FirebaseStorage in Frameworks */,
 				28864C3626CEC0990015DA92 /* Kingfisher in Frameworks */,
 			);
@@ -114,6 +118,7 @@
 		281B283526C56F5200636A0D = {
 			isa = PBXGroup;
 			children = (
+				28F6450A26D274AC009B1792 /* README.md */,
 				281B284026C56F5200636A0D /* FoodOrderingApp */,
 				281B283F26C56F5200636A0D /* Products */,
 			);
@@ -395,6 +400,7 @@
 				281B288726CACD3000636A0D /* FirebaseAuth */,
 				281B288926CACD3000636A0D /* FirebaseFirestore */,
 				28864C3526CEC0990015DA92 /* Kingfisher */,
+				28F6450826D24BE8009B1792 /* ProgressHUD */,
 			);
 			productName = FoodOrderingApp;
 			productReference = 281B283E26C56F5200636A0D /* FoodOrderingApp.app */;
@@ -426,6 +432,7 @@
 			packageReferences = (
 				281B288226CACD3000636A0D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				28864C3426CEC0990015DA92 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				28F6450726D24BE8009B1792 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 281B283F26C56F5200636A0D /* Products */;
 			projectDirPath = "";
@@ -443,6 +450,7 @@
 			files = (
 				28485E7126D0370500146837 /* MealListTableViewCell.xib in Resources */,
 				281B285126C56F5400636A0D /* LaunchScreen.storyboard in Resources */,
+				28F6450B26D274AC009B1792 /* README.md in Resources */,
 				28F6450326D24297009B1792 /* OrderCollectionViewCell.xib in Resources */,
 				28485E6526CFA80400146837 /* MealLandscapeCollectionViewCell.xib in Resources */,
 				28864C3026CEBDD70015DA92 /* CategoryCollectionViewCell.xib in Resources */,
@@ -708,6 +716,14 @@
 				minimumVersion = 6.3.1;
 			};
 		};
+		28F6450726D24BE8009B1792 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -735,6 +751,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28864C3426CEC0990015DA92 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		28F6450826D24BE8009B1792 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28F6450726D24BE8009B1792 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 
